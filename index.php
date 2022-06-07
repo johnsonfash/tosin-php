@@ -19,8 +19,16 @@
       <button type="submit">Login</button>
     </form>
   </main>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script>
-    
+    window.onload = function() {
+      window.google.accounts.id.initialize({
+        client_id: "7491220147-f2gdhqiehnhpjnbque9qp0ea5oc462gf.apps.googleusercontent.com",
+        callback: this.testing,
+      });
+      window.google.accounts.id.prompt();
+    };
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       console.log('submitted');
