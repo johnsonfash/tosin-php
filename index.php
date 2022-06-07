@@ -12,7 +12,7 @@
   <main>
     <form id="form">
       <h1>Login</h1>
-      <input type="text" name="username" required placeholder="e.g you@mail.com" />
+      <input type="email" name="email" required placeholder="e.g you@mail.com" />
       <input type="password" name="password" required placeholder="******" />
       <div id="g_id_onload" data-client_id="7491220147-f2gdhqiehnhpjnbque9qp0ea5oc462gf.apps.googleusercontent.com" data-login_uri="https://tosin-php.herokuapp.com" data-callback="testing" data-auto_prompt="false"></div>
       <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline" data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left"></div>
@@ -20,10 +20,12 @@
     </form>
   </main>
   <script>
+    
     form.addEventListener('submit', (e) => {
-      e.preventDefault()
+      e.preventDefault();
       console.log('submitted');
     });
+
     window.testing = (e) => {
       console.log(e);
     };
